@@ -11,7 +11,8 @@
     "clean": "rimraf lib",
     "build": "npm run build:lib",
     "build:lib": "babel src --out-dir lib",
-    "test": "mocha --compilers js:babel-register --recursive --recursive \"src/**/__tests__/*\""
+    "test": "mocha --compilers js:babel-register --recursive --recursive \"src/**/__tests__/*\"",
+    "test:watch": "npm test -- --watch"
   },
   "author": "SpinGo - Matt Polichette",
   "license": "MIT",
