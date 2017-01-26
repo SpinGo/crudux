@@ -1,4 +1,4 @@
-const crudux = '@@CRUDUX/'
+const crudux = '@@crudux/'
 
 export const FETCH_RESOURCE_REQUEST = `${crudux}FETCH_RESOURCE/request`
 export const FETCH_RESOURCE_SUCCESS = `${crudux}FETCH_RESOURCE/success`

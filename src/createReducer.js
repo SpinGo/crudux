@@ -11,7 +11,7 @@ export default schemas =>
   combineReducers({
     entities: createEntitiesReducer(schemas),
     meta: createEntitiesMetadataReducer(schemas),
-    pages: pagesReducer,
+    page: pagesReducer,
     pageMeta: pageMetadataReducer,
     pageGroup: pageGroupReducer,
   })

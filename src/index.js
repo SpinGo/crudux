@@ -1,3 +1,11 @@
+import createReducer from './createReducer'
+import createPageKey from './util/createPageKey'
+import * as actionTypes from './actionTypes'
+
+export * from './actions'
 export * from './selectors'
-export { createPageKey } from './util/createPageKey'
-export default from './createReducer.js'
+export {
+  actionTypes,
+  createPageKey,
+}
+export default createReducer

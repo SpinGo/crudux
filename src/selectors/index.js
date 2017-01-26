@@ -1,12 +1,27 @@
-export { getEntity } from './getEntity'
-export { getEntityIsReady } from './getEntityIsReady'
-export { getEntityMetadata } from './getEntityMetadata'
-export { getPage } from './getPage'
-export { getPageEntities } from './getPageEntities'
-export { getPageGroupEntities } from './getPageGroupEntities'
-export { getPageGroupIsReady } from './getPageGroupIsReady'
-export { getPageGroupPage } from './getPageGroupPage'
-export { getPageGroupPageKey } from './getPageGroupPageKey'
-export { getPageGroupPageMetadata } from './getPageGroupPageMetadata'
-export { getPageIsReady } from './getPageIsReady'
-export { getPageMetadata } from './getPageMetadata'
+import getEntity from './getEntity'
+import getEntityIsReady from './getEntityIsReady'
+import getEntityMetadata from './getEntityMetadata'
+import getPage from './getPage'
+import getPageEntities from './getPageEntities'
+import getPageGroupEntities from './getPageGroupEntities'
+import getPageGroupIsReady from './getPageGroupIsReady'
+import getPageGroupPage from './getPageGroupPage'
+import getPageGroupPageKey from './getPageGroupPageKey'
+import getPageGroupPageMetadata from './getPageGroupPageMetadata'
+import getPageIsReady from './getPageIsReady'
+import getPageMetadata from './getPageMetadata'
+
+export {
+  getEntity,
+  getEntityIsReady,
+  getEntityMetadata,
+  getPage,
+  getPageEntities,
+  getPageGroupEntities,
+  getPageGroupIsReady,
+  getPageGroupPage,
+  getPageGroupPageKey,
+  getPageGroupPageMetadata,
+  getPageIsReady,
+  getPageMetadata,
+}
