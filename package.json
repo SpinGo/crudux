@@ -1,7 +1,7 @@
 {
   "name": "crudux",
   "version": "1.0.0",
-  "description": "A redux library for managin CRUD state.",
+  "description": "A redux library for managing CRUD state.",
   "main": "lib/index.js",
   "repository": {
     "type": "git",

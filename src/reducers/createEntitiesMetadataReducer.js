@@ -37,9 +37,9 @@ export default (schemas) => {
 
     const newState = metadataFlagsReducer(entityState, action)
 
-    if (resourceClientId) {
-      console.log('TODO - cleanup resourceClientId') // eslint-disable-line
-    }
+    // if (resourceClientId) {
+    //   TODO - cleanup resourceClientId'
+    // }
 
     return {
       ...state,
