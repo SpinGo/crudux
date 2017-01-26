@@ -29,7 +29,7 @@ const paginationReducer = (state = {}, action) => {
   }
 }
 
-const pageMetaDataReducer = combineReducers({
+const pageMetadataReducer = combineReducers({
   hasBeenRequested,
   isFetching,
   params: paramsReducer,
@@ -40,6 +40,6 @@ export default (state = {}, action) => {
   const { meta } = action
   if (!(meta && meta.pageKey)) { return state }
   const { pageKey } = meta
-  const newState = pageMetaDataReducer(state[pageKey], action)
+  const newState = pageMetadataReducer(state[pageKey], action)
   return { ...state, [pageKey]: newState }
 }

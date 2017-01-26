@@ -1,4 +1,5 @@
 export { createPageKey } from './createPageKey'
+export { initialStateFromSchemas } from './initialStateFromSchemas'
 export { moveUnder } from './moveUnder'
 export { popUnder } from './popUnder'
 export { putUnder } from './putUnder'

@@ -3,9 +3,9 @@ import getPageMetadata from './getPageMetadata'
 
 const getPageIsReady = (getCrudState = getCruduxState) =>
   (pageKey, state) => {
-    const metaData = getPageMetadata(getCrudState)(pageKey, state)
-    if (metaData) {
-      const { isFetching, hasBeenRequested } = metaData
+    const metadata = getPageMetadata(getCrudState)(pageKey, state)
+    if (metadata) {
+      const { isFetching, hasBeenRequested } = metadata
       return hasBeenRequested && !isFetching
     }
     return false
