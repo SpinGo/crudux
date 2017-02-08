@@ -1,5 +1,6 @@
 export default (state, key, underKey) => {
-  const { [key]: toSave, [underKey]: store = {}, ...newState } = state
-  store[key] = toSave
+  const skey = `${key}`
+  const { [skey]: toSave, [underKey]: store = {}, ...newState } = state
+  store[skey] = toSave
   return { ...newState, [underKey]: store }
 }
