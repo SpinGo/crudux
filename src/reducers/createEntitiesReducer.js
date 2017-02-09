@@ -1,17 +1,11 @@
-import reduce from 'lodash/reduce'
-import { initialStateFromSchemas, popUnder, putUnder } from '../util'
+import {
+  initialStateFromSchemas,
+  mergeNewEntities,
+  popUnder,
+  putUnder,
+} from '../util'
 
 import * as actionTypes from '../actionTypes'
-
-const unionEntities = (allEntities, entities, resourceName) =>
-  ({ ...allEntities, [resourceName]: { ...allEntities[resourceName], ...entities } })
-
-const mergeNewEntities = (state, action) => {
-  if (action.payload && action.payload.entities) {
-    return reduce(action.payload.entities, unionEntities, state)
-  }
-  return state
-}
 
 const reduceEntityType = (state = {}, action) => {
   // Notes:
