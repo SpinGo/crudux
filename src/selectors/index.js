@@ -1,3 +1,4 @@
+import getAllEntities from './getAllEntities'
 import getEntity from './getEntity'
 import getEntityIsReady from './getEntityIsReady'
 import getEntityMetadata from './getEntityMetadata'
@@ -12,6 +13,7 @@ import getPageIsReady from './getPageIsReady'
 import getPageMetadata from './getPageMetadata'
 
 export {
+  getAllEntities,
   getEntity,
   getEntityIsReady,
   getEntityMetadata,
