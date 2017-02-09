@@ -1,4 +1,5 @@
 import { combineReducers } from 'redux'
+import omitBy from 'lodash/omitBy'
 import * as actionTypes from '../actionTypes'
 import flag from './flagReducer'
 
@@ -57,8 +58,17 @@ const pageMetadataReducer = combineReducers({
 
 export default (state = {}, action) => {
   const { meta } = action
-  if (!(meta && meta.pageKey)) { return state }
-  const { pageKey } = meta
-  const newState = pageMetadataReducer(state[pageKey], action)
-  return { ...state, [pageKey]: newState }
+  switch (action.type) {
+    case actionTypes.CREATE_RESOURCE_SUCCESS:
+    case actionTypes.UPDATE_RESOURCE_SUCCESS:
+    case actionTypes.DELETE_RESOURCE_SUCCESS: {
+      return omitBy(state, page => page.schema === meta.schema)
+    }
+    default: {
+      if (!(meta && meta.pageKey)) { return state }
+      const { pageKey } = meta
+      const newState = pageMetadataReducer(state[pageKey], action)
+      return { ...state, [pageKey]: newState }
+    }
+  }
 }
