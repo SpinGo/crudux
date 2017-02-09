@@ -10,7 +10,7 @@ describe('getPageIsReady', () => {
   it('should be true when has been requested and not fetching', () => {
     expect(getPageIsReady()('user/page=1', {
       crudux: {
-        pageMeta: {
+        page: {
           'user/page=1': { hasBeenRequested: true, isFetching: false },
         },
       },
@@ -20,7 +20,7 @@ describe('getPageIsReady', () => {
   it('should be false if fetching', () => {
     expect(getPageIsReady()('user/page=1', {
       crudux: {
-        pageMeta: {
+        page: {
           'user/page=1': { hasBeenRequested: true, isFetching: true },
         },
       },
@@ -30,7 +30,7 @@ describe('getPageIsReady', () => {
   it('should be false if was not requested', () => {
     expect(getPageIsReady()('user/page=1', {
       crudux: {
-        pageMeta: {
+        page: {
           'user/page=1': { hasBeenRequested: false },
         },
       },
@@ -39,7 +39,7 @@ describe('getPageIsReady', () => {
 
   it('should be false page doesn\'t exist', () => {
     expect(getPageIsReady()('user/page=1', {
-      crudux: { pageMeta: {} },
+      crudux: { page: {} },
     })).toEqual(false)
   })
 
@@ -47,7 +47,7 @@ describe('getPageIsReady', () => {
     const getOtherMountPoint = state => state.otherMountPoint
     expect(getPageIsReady(getOtherMountPoint)('user/page=1', {
       otherMountPoint: {
-        pageMeta: {
+        page: {
           'user/page=1': { hasBeenRequested: true, isFetching: false },
         },
       },

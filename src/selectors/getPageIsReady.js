@@ -1,11 +1,11 @@
 import getCruduxState from '../util/getCruduxState'
-import getPageMetadata from './getPageMetadata'
+import getPage from './getPage'
 
 const getPageIsReady = (getCrudState = getCruduxState) =>
   (pageKey, state) => {
-    const metadata = getPageMetadata(getCrudState)(pageKey, state)
-    if (metadata) {
-      const { isFetching, hasBeenRequested } = metadata
+    const page = getPage(getCrudState)(pageKey, state)
+    if (page) {
+      const { isFetching, hasBeenRequested } = page
       return hasBeenRequested && !isFetching
     }
     return false

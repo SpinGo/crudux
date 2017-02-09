@@ -13,7 +13,7 @@ describe('getPageGroupIsReady', () => {
         pageGroup: {
           main: { currentPage: 'user/page=1' },
         },
-        pageMeta: {
+        page: {
           'user/page=1': { hasBeenRequested: true, isFetching: false },
         },
       },
@@ -27,7 +27,7 @@ describe('getPageGroupIsReady', () => {
         pageGroup: {
           main: { currentPage: 'user/page=1' },
         },
-        pageMeta: {
+        page: {
           'user/page=1': { hasBeenRequested: true, isFetching: false },
         },
       },

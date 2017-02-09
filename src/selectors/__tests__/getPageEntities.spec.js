@@ -17,7 +17,9 @@ describe('getPageEntities', () => {
     expect(getPageEntities()(userSchema, 'user/page=1', {
       crudux: {
         page: {
-          'user/page=1': [1],
+          'user/page=1': {
+            entities: [1],
+          },
         },
         entities: {
           user: {
@@ -32,7 +34,9 @@ describe('getPageEntities', () => {
     expect(getPageEntities()(messageSchema, 'messages/page=1', {
       crudux: {
         page: {
-          'messages/page=1': [1],
+          'messages/page=1': {
+            entities: [1],
+          },
         },
         entities: {
           user: {
@@ -56,7 +60,9 @@ describe('getPageEntities', () => {
     expect(getPageEntities()(messageSchema, 'messages/page=1', {
       crudux: {
         page: {
-          'messages/page=1': [1, 2],
+          'messages/page=1': {
+            entities: [1, 2],
+          },
         },
         entities: {
           user: {
@@ -87,7 +93,9 @@ describe('getPageEntities', () => {
     expect(getPageEntities(getOtherMountPoint)(userSchema, 'user/page=1', {
       otherMountPoint: {
         page: {
-          'user/page=1': [1],
+          'user/page=1': {
+            entities: [1],
+          },
         },
         entities: {
           user: {

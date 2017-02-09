@@ -17,7 +17,9 @@ describe('getPageGroupEntities', () => {
           main: { currentPage: 'user/page=1' },
         },
         page: {
-          'user/page=1': [1],
+          'user/page=1': {
+            entities: [1],
+          },
         },
         entities: {
           user: {
@@ -36,7 +38,9 @@ describe('getPageGroupEntities', () => {
           main: { currentPage: 'user/page=1' },
         },
         page: {
-          'user/page=1': [1],
+          'user/page=1': {
+            entities: [1],
+          },
         },
         entities: {
           user: {

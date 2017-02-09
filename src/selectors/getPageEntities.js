@@ -6,7 +6,8 @@ const getPageEntities = (getCrudState = getCruduxState) =>
   (schema, pageKey, state) => {
     const { entities } = getCrudState(state)
     const page = getPage(getCrudState)(pageKey, state)
-    return denormalize(page, [schema], entities)
+    const ids = (page && page.entities) || []
+    return denormalize(ids, [schema], entities)
   }
 
 export default getPageEntities
